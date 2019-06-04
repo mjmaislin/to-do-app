@@ -1,0 +1,23 @@
+div.form {
+  margin: 20px;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: bold;
+}
+
+li {
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+   header.mdl-layout__header {
+     display: flex;
+   }
+ }
