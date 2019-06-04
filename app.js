@@ -11,6 +11,7 @@ function onReady() {
 
     // create a new li
     let newLi = document.createElement('li');
+    newLi.className = "mdl-list__item";
 
     // create a new input
     let checkbox = document.createElement('input');
@@ -18,11 +19,24 @@ function onReady() {
     // set the input's type to checkbox
     checkbox.type = "checkbox";
 
+    // create a delete button
+    let deleteBtn = document.createElement('button');
+    deleteBtn.textContent = "Delete";
+    deleteBtn.className = "mdl-button mdl-js-button mdl-button--accent";
+
+    // delete li item on click
+    deleteBtn.addEventListener('click', function(event) {
+      toDoList.removeChild(this.parentElement);
+    })
+
     // set the title
     newLi.textContent = title;
 
     // attach the checkbox to the li
     newLi.appendChild(checkbox);
+
+    // attach the delete button to the li
+    newLi.appendChild(deleteBtn);
 
     // attach the li to the ul
     toDoList.appendChild(newLi);
